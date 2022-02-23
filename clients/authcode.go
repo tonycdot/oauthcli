@@ -44,7 +44,7 @@ func (c *authCode) GenerateAccessToken(client_id, client_secret, scopes string, 
 	v := url.Values{
 		"response_type": {"code"},
 		"client_id":     {client_id},
-		"state":         {"rand"},
+		"state":         {"some_state"},
 		"scope":         {scopes},
 		"redirect_uri":  {c.redirectURL},
 	}
